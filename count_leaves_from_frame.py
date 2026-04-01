@@ -13,3 +13,10 @@ def detect_from_image(cv_image, pt_file):
     annotated_image = results.plot()
 
     return total, annotated_image, detections
+
+
+if __name__ == '__main__':
+    pt = './yolo11n.pt'
+    test_file = './canopy1.jpg'
+    cv_image = cv2.imread(test_file)
+    detect_from_image(cv_image, pt)
