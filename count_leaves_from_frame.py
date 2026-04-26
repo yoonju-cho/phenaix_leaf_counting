@@ -1,10 +1,5 @@
 import sys
 import os
-#Ensure virtual environment is used for ultralytics import
-venv_path ='/opt/pyenv/lib/python3.12/site-packages'
-if venv_path not in sys.path:
-    sys.pat.insert(0,venv_path)
-
 from ultralytics import YOLO
 
 def detect_from_image(cv_image, pt_file):
